@@ -6,3 +6,12 @@ temp/
 
 #ignore env
 .env
+
+#ignore qdrant
+raft_state.json
+collections
+aliases
+.deleted
+
+#ignore pdfs
+*.pdf
