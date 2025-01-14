@@ -4,14 +4,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
 
 loader = PyPDFLoader("reading1.pdf")
-documents = loader.load
-
+documents = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 500,
-    chunk_overlap = 50
+    chunk_size = 2000,
+    chunk_overlap = 100
 )
-
-texts = text_splitter.create_documents(texts=documents)
+texts = text_splitter.split_documents(documents)
 
 model_name = "BAAI/bge-large-en"
 model_kwargs = {'device': 'cpu'}

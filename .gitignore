@@ -13,5 +13,11 @@ collections
 aliases
 .deleted
 
+#ignore chainlit
+.chainlit
+__pycache__
+.files
+chainlit.md
+
 #ignore pdfs
 *.pdf
